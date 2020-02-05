@@ -1,5 +1,0 @@
-This is a line of text.  
-
-The third line.
-
-And another paragraph.
