@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[ ]:
+
 
 #import all necessary modules
 import requests
@@ -29,7 +31,7 @@ auth = OAuth1(api_key, api_secret_key, access_token, access_token_secret)
 
 #FUNCRION 1: Finding user entered with screen_name argument
 #define function with arguments: screen_name and keys(optional)
-def find_user(screen_name, keys=[None]):
+def find_user(screen_name, keys=None):
     #remove '@' symbol if present in screen_name
     if screen_name[0] == '@':
         screen_name = screen_name[1:]
@@ -41,7 +43,6 @@ def find_user(screen_name, keys=[None]):
     #if no keys are entered, return entire user object
     if keys == None:
         return user_object
-    #else, search for the specific keys in the user_object, and return them in a new dictionary
     else:
         user_desc = {}
         for key in keys:
@@ -121,7 +122,7 @@ def get_followers(screen_name, keys=['name', 'followers_count', 'friends_count',
 
 #FUNCTION 4: finding list of common followers through two screen_names
 #define function with arguments: names (list), keys (optional), and to_df boolean (default False)
-def friends_of_friends(names, keys=[None], to_df=False):
+def friends_of_friends(names, keys=None, to_df=False):
     #place the names list into two separate variables
     user_1, user_2 = names[0], names[1]
     #remove '@' symbol if present in name
@@ -177,7 +178,7 @@ def friends_of_friends(names, keys=[None], to_df=False):
 
 #FUNCTION 5: finding entire list of common followers, cursoring through entire user object
 #friends_of_friends argument with additional full_search argument (boolean, default False)
-def friends_of_friends(names, full_search=False, keys=[None], to_df=False):
+def friends_of_friends(names, full_search=False, keys=None, to_df=False):
     
     #import time function to avoid API limit error
     import time
