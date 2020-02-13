@@ -79,7 +79,7 @@ def find_hashtag(hashtag, count=None, search_type='mixed'):
     list of data object that contain information about each tweet that matches the hashtag provided as input
     """
     # make sure the user input a valid search type
-    assert (search_type not in ('mixed', 'recent', 'popular')), 'search_type not in options. Select one of the following:\n("mixed", "recent", "popular")' 
+    # assert (search_type not in ('mixed', 'recent', 'popular')), 'search_type not in options. Select one of the following:\n("mixed", "recent", "popular")' 
     # add hashtag if user did not input it
     hashtag = hashtag if '#' != hashtag[0] else '#' + hashtag
     # convert # into version twitter api needs
