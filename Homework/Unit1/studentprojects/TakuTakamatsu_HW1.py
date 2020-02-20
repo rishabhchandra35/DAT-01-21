@@ -175,7 +175,6 @@ def friends_of_friends(names, keys=None, to_df=False):
 
 # In[ ]:
 
-
 #FUNCTION 5: finding entire list of common followers, cursoring through entire user object
 #friends_of_friends argument with additional full_search argument (boolean, default False)
 def friends_of_friends(names, full_search=False, keys=None, to_df=False):
