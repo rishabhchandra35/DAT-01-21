@@ -155,13 +155,14 @@ def write_df(file_path_read, file_path_write, chunksize=1000, missing_vals=None)
         chunk_writer(chunk, file_path_write, first_chunk)
         first_chunk = False
 
-
+"""
 if __name__ == '__main__':
-    d = probe_df('../data/titanic.csv', chunksize=100)
+    # d = probe_df('../data/titanic.csv', chunksize=100)
     print(d)
-    x = probe_df('../data/titanic.csv', chunksize=100, to_df=True)
+    # x = probe_df('../data/titanic.csv', chunksize=100, to_df=True)
     print(x)
-    nas = {'Age': 0, 'Cabin': 'Nope', 'Embarked':'Nope'}
+    #nas = {'Age': 0, 'Cabin': 'Nope', 'Embarked':'Nope'}
     write_df('../data/titanic.csv', '../data/titanic2.csv', chunksize=100, missing_vals=nas)
     write_df('../data/titanic.csv', '../data/titanic2.txt', chunksize=100, missing_vals=nas)
     write_df('../data/titanic.csv', '../data/titanic2.xlsx', chunksize=100, missing_vals=nas)
+"""
